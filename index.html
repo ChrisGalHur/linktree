@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             position: relative; /* Para posicionar imagenes */
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         /* Estilos para el contenedor principal */
@@ -21,6 +22,7 @@
             height: 100vh;
             background-color:white;
             background-size: cover;
+            padding: 20px;
         }
 
         /* Estilos para las imagenes */
@@ -60,10 +62,13 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Alinea los enlaces a la izquierda */
+            align-items: center; /* Alinea los enlaces a la izquierda */
             padding: 10px;
             border-radius: 10px;
             background-color: rgb(3, 3, 3);
+            width: 100%;
+            max-width: 400px; /* Máximo ancho del contenedor */
+            box-sizing: border-box; /* Incluir padding y border en el tamaño total */
         }
         
         /* Estilos para los enlaces */
@@ -77,7 +82,8 @@
             padding: 20px; /*espacio alrededor del texto e imagen */
             border-radius: 10px;
             background-color: #2D5892;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
         }
 
         /*Estilos para las imagenes de los enlaces*/
@@ -92,6 +98,31 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 30px; /* Margen de la imagen principal a las letras*/
+        }
+
+        /* Media queries para móviles */
+        @media (max-width: 600px) {
+            .linktree-container {
+                padding: 10px;
+                height: auto; /* Ajustar altura automática */
+            }
+
+            .linktree-link {
+                font-size: 16px; /* Reducir tamaño de fuente */
+                padding: 10px; /* Reducir padding */
+                width: 90%; /* Ajustar ancho */
+            }
+
+            .main-image {
+                width: 150px;
+                height: 150px; /* Reducir tamaño de la imagen principal */
+                margin-bottom: 10px; /* Reducir margen para móviles */
+            }
+
+            .corner-image-left, .corner-image-right {
+                width: 30px; /* Reducir tamaño de las esquinas */
+                height: 30px;
+            }
         }
     </style>
 </head>
