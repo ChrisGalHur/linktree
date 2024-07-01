@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Linktree</title>
+    <style>
+        /* Eliminar márgenes y relleno */
+        body, html {
+            margin: 0;
+            padding: 0;
+            position: relative; /* Para posicionar imagenes */
+        }
+
+        /* Estilos para el contenedor principal */
+        .linktree-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+            background-color:white;
+            background-size: cover;
+        }
+
+        /* Estilos para las imagenes */
+        .corner-image-left{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            z-index: 9999;
+        }
+
+        .corner-image-right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            z-index: 9999;
+        }
+
+        .central-image{
+            position: absolute;
+            width: 1200px;
+            height: 450px;
+            z-index: 1;
+            top: 150px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+
+        /* Contenedor para los enlaces */
+        .links-container{
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alinea los enlaces a la izquierda */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(3, 3, 3);
+        }
+        
+        /* Estilos para los enlaces */
+        .linktree-link {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            text-decoration: none;
+            color: #f0d5b5;
+            font-size: 20px;
+            padding: 20px; /*espacio alrededor del texto e imagen */
+            border-radius: 10px;
+            background-color: #2D5892;
+            width: 300px;
+        }
+
+        /*Estilos para las imagenes de los enlaces*/
+        .linktree-link img {
+            margin-right: 10px; /* Añade espacio entre las imagenes y el texto */
+        }
+
+        /* Estilos para la imagen principal */
+        .main-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px; /* Margen de la imagen principal a las letras*/
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagenes -->
+    <img class="corner-image-left" src="img/logo_iz.png" alt="corner-image-left">
+    <img class="corner-image-right" src="img/logo_der.png" alt="corner-image-right">
+    <img class="central-image" src="img/logo_central.png" alt="central-image">
+
+    <div class="linktree-container">
+        <img class="main-image" src="img/avatar.jpg" alt="Imagen Principal">
+        <div class="links-container">
+            <a class="linktree-link" href="https://chrisgalhur.github.io/">
+                <img src="img/cvNew.png" alt="Icono de enlace" width="40" height="40"> <!-- Añade imagen antes del texto -->
+                Currículo
+            </a>
+
+            <a class="linktree-link" href="https://chrisgalhur.github.io/">
+                <img src="img/sitio-web.png" alt="Icono de enlace" width="40" height="40"> <!-- Añade imagen antes del texto -->
+                Portfolio Web
+            </a>
+            
+            <a class="linktree-link" href="https://github.com/ChrisGalHur">
+                <img src="img/github.png" alt="Icono de enlace" width="40" height="40"> <!-- Añade imagen antes del texto -->
+                GitHub
+            </a>
+
+            <a class="linktree-link" href="https://www.linkedin.com/in/chrisgalhur">
+                <img src="img/linkedin.png" alt="Icono de enlace" width="40" height="40"> <!-- Añade imagen antes del texto -->
+                Linkedin
+            </a>
+
+            <!-- Más enlaces aquí -->
+        </div>
+    </div>
+</body>
+</html>
