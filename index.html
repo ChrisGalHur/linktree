@@ -18,15 +18,15 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items:center;
+            align-items: center;
             height: 100vh;
-            background-color:white;
+            background-color: white;
             background-size: cover;
             padding: 20px;
         }
 
-        /* Estilos para las imagenes */
-        .corner-image-left{
+        /* Estilos para las imágenes */
+        .corner-image-left {
             position: absolute;
             top: 0px;
             left: 0px;
@@ -35,7 +35,7 @@
             z-index: 9999;
         }
 
-        .corner-image-right{
+        .corner-image-right {
             position: absolute;
             top: 0;
             right: 0;
@@ -44,7 +44,7 @@
             z-index: 9999;
         }
 
-        .central-image{
+        .central-image {
             position: absolute;
             width: 1200px;
             height: 450px;
@@ -56,13 +56,12 @@
             margin: auto;
         }
 
-
         /* Contenedor para los enlaces */
-        .links-container{
+        .links-container {
             z-index: 2;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Alinea los enlaces a la izquierda */
+            align-items: center; /* Alinea los enlaces al centro */
             padding: 10px;
             border-radius: 10px;
             background-color: rgb(3, 3, 3);
@@ -79,16 +78,17 @@
             text-decoration: none;
             color: #f0d5b5;
             font-size: 20px;
-            padding: 20px; /*espacio alrededor del texto e imagen */
+            padding: 20px; /* Espacio alrededor del texto e imagen */
             border-radius: 10px;
             background-color: #2D5892;
             width: 100%;
             max-width: 300px;
+            justify-content: center; /* Centrar el contenido */
         }
 
-        /*Estilos para las imagenes de los enlaces*/
+        /* Estilos para las imágenes de los enlaces */
         .linktree-link img {
-            margin-right: 10px; /* Añade espacio entre las imagenes y el texto */
+            margin-right: 10px; /* Añade espacio entre las imágenes y el texto */
         }
 
         /* Estilos para la imagen principal */
@@ -97,7 +97,7 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 30px; /* Margen de la imagen principal a las letras*/
+            margin-bottom: 30px; /* Margen de la imagen principal a las letras */
         }
 
         /* Media queries para móviles */
@@ -119,14 +119,16 @@
                 margin-bottom: 10px; /* Reducir margen para móviles */
             }
 
-            .corner-image-left, .corner-image-right, .central-image {
-                display: none !important;
+            body .corner-image-left,
+            body .corner-image-right,
+            body .central-image {
+                display: none !important; /* Ocultar en móviles */
             }
         }
     </style>
 </head>
 <body>
-    <!-- Imagenes -->
+    <!-- Imágenes -->
     <img class="corner-image-left" src="img/logo_iz.png" alt="corner-image-left">
     <img class="corner-image-right" src="img/logo_der.png" alt="corner-image-right">
     <img class="central-image" src="img/logo_central.png" alt="central-image">
@@ -134,7 +136,7 @@
     <div class="linktree-container">
         <img class="main-image" src="img/avatar.jpg" alt="Imagen Principal">
         <div class="links-container">
-            <a class="linktree-link" href="https://chrisgalhur.github.io/">
+            <a class="linktree-link" href="https://drive.google.com/file/d/1aJAbwJXjMDW4GeNBY8EMuTzGVE4IeF5E/view?usp=drive_link">
                 <img src="img/cvNew.png" alt="Icono de enlace" width="40" height="40"> <!-- Añade imagen antes del texto -->
                 Currículo
             </a>
